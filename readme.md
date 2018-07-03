@@ -1,6 +1,6 @@
 # pkg-scripts [![Build Status](https://travis-ci.org/rjoydip/pkg-scripts.svg?branch=master)](https://travis-ci.org/rjoydip/pkg-scripts)
 
-> Get package scripts
+> Get package scripts.
 
 ## Install
 
