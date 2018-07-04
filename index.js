@@ -4,7 +4,7 @@ const pkgUp = require('pkg-up')
 const readPkg = require('read-pkg')
 const dotProp = require('dot-prop')
 
-class PkgScripts {
+class PkgScript {
   constructor(opt) {
     this._options = opt || { dir: process.cwd() }
     this._readPkg = readPkg.sync(pkgUp.sync(this._options.dir))
@@ -63,4 +63,4 @@ class PkgScripts {
   }
 }
 
-module.exports = Object.assign(new PkgScripts(), { PkgScripts })
+module.exports = Object.assign(new PkgScript(), { PkgScript })

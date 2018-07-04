@@ -1,11 +1,11 @@
-# pkg-scripts [![Build Status](https://travis-ci.org/rjoydip/pkg-scripts.svg?branch=master)](https://travis-ci.org/rjoydip/pkg-scripts)
+# pkg-script [![Build Status](https://travis-ci.org/rjoydip/pkg-script.svg?branch=master)](https://travis-ci.org/rjoydip/pkg-script)
 
 > Get package scripts
 
 ## Install
 
 ```
-$ npm i pkg-scripts
+$ npm i pkg-script
 ```
 
 ## Example
@@ -13,47 +13,47 @@ $ npm i pkg-scripts
 ### import 1
 
 ```js
-const pkgScripts = require('pkg-scripts')
+const pkgScript = require('pkg-script')
 ```
 
 ### import 2
 
 ```js
-const {PkgScripts} = require('pkg-dep')
-const pkgScripts = new PkgScripts()
+const {pkgScript} = require('pkg-script')
+const pkgScript = new pkgScript()
 ```
 
 ### Methods
 
 ```js
-console.log(pkgScripts.getSync())
-pkgScripts.get().then(res => console.log(res))
-pkgScripts.has('dot-prop').then(res => console.log(res))
-console.log(pkgScripts.hasSync('dot-prop'))
+console.log(pkgScript.getSync())
+pkgScript.get().then(res => console.log(res))
+pkgScript.has('dot-prop').then(res => console.log(res))
+console.log(pkgScript.hasSync('dot-prop'))
 ```
 
 ## API
 
-### new PkgScripts() or pkgScripts()
+### new pkgScript() or pkgScript()
 
 Returns a `new` instance.
 
-### pkgScripts.get()
+### pkgScript.get()
 
 Returns a `Promise` of scripts object.
 
-### pkgScripts.getSync()
+### pkgScript.getSync()
 
 Returns scripts object.
 
-### pkgScripts.has()
+### pkgScript.has()
 
 Returns a result(`Promise`) of typeof `boolean` whether a script exists or not.
 
-### pkgScripts.hasSync()
+### pkgScript.hasSync()
 
 Returns a result typeof `boolean` whether a script exists or not.
 
 ## License
 
-MIT © [Joydip Roy (rjoydip)](https://github.com/rjoydip/pkg-scripts/blob/master/license.md)
+MIT © [Joydip Roy (rjoydip)](https://github.com/rjoydip/pkg-script/blob/master/license.md)

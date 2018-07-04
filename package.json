@@ -1,5 +1,5 @@
 {
-  "name": "pkg-scripts",
+  "name": "pkg-script",
   "version": "1.0.0",
   "description": "Get package scripts",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "prepush": "npm run lint && npm run test"
   },
   "keywords": [
-    "pkg-scripts",
+    "pkg-script",
     "scripts",
     "package",
     "pkg"

@@ -1,9 +1,9 @@
-const pkgScripts = require('.')
+const pkgScript = require('.')
 
-// const {PkgScripts} = require('.')
-// const pkgScripts = new PkgScripts()
+// const {PkgScript} = require('.')
+// const pkgScript = new PkgScript()
 
-console.log(pkgScripts.getSync())
-pkgScripts.get().then(res => console.log(res))
-pkgScripts.has('test').then(res => console.log(res))
-console.log(pkgScripts.hasSync('test'))
+console.log(pkgScript.getSync())
+pkgScript.get().then(res => console.log(res))
+pkgScript.has('test').then(res => console.log(res))
+console.log(pkgScript.hasSync('test'))
