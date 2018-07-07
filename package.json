@@ -1,6 +1,6 @@
 {
   "name": "pkg-script",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get package scripts",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
     "precommit": "npm run lint",
     "prepush": "npm run lint && npm run test"
   },
+  "repository": "rjoydip/pkg-script",
   "keywords": [
     "pkg-script",
     "scripts",
