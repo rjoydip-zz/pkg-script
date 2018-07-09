@@ -34,9 +34,28 @@ console.log(pkgScript.hasSync('dot-prop'))
 
 ## API
 
-### new pkgScript() or pkgScript()
+### new pkgScript([options])
 
 Returns a `new` instance.
+
+### pkgScript()
+
+Returns a instance of module.
+
+### pkgScript.config([options])
+
+Configure with options.
+
+#### options
+
+Type: `Object`
+
+##### cwd
+
+Type: `string`<br>
+Default: `process.cwd()`
+
+Current working directory.
 
 ### pkgScript.get()
 

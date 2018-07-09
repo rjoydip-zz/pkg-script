@@ -1,13 +1,26 @@
 'use strict'
 
+const path = require('path')
+const chalk = require('chalk')
 const pkgUp = require('pkg-up')
 const readPkg = require('read-pkg')
 const dotProp = require('dot-prop')
+const fileExists = require('file-exists')
 
 class PkgScript {
   constructor(opt) {
-    this._options = opt || { dir: process.cwd() }
-    this._readPkg = readPkg.sync(pkgUp.sync(this._options.dir))
+    this._options = opt || { cwd: process.cwd() }
+    this._readPkg = this.$readPkg()
+  }
+
+  $readPkg() {
+    return fileExists.sync(path.join(this._options.cwd, 'package.json')) ? readPkg.sync({ cwd: this._options.cwd }) : (console.log(chalk.red('No package.json found')), {})
+  }
+
+  config(option) {
+    this._options = typeof option === 'object' ? option : {}
+    this._readPkg = this.$readPkg()
+    return this
   }
 
   _isString(value) {
@@ -19,7 +32,7 @@ class PkgScript {
   }
 
   _getScriptsObj() {
-    return this._readPkg.scripts
+    return Object.keys(this._readPkg).length ? this._readPkg.scripts : {}
   }
 
   _get() {

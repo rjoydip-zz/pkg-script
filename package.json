@@ -1,11 +1,11 @@
 {
   "name": "pkg-script",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Get package scripts",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint **/*.js --ignore-path .gitignore",
-    "test": "./node_modules/.bin/jest --coverage test.js",
+    "test": "./node_modules/.bin/jest --coverage test/test.js",
     "precommit": "npm run lint",
     "prepush": "npm run lint && npm run test"
   },
@@ -23,7 +23,9 @@
   },
   "license": "MIT",
   "dependencies": {
+    "chalk": "^2.4.1",
     "dot-prop": "^4.2.0",
+    "file-exists": "^5.0.1",
     "pkg-up": "^2.0.0",
     "read-pkg": "^4.0.1"
   },
